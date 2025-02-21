@@ -1,0 +1,48 @@
+/*
+Permet de tester toutes les structure conditionelle sauf FAIRE TQ qui ne veut pas etre lu
+*/
+
+ALGO testcompilateur(a, b)
+VAR somme,i;
+DEBUT
+    SI a > b ALORS
+        ECRIRE(-10);  //a plus grand que b
+    SINON
+        ECRIRE(-11);
+    FSI
+
+    somme <- 0;
+
+    POUR i ALLANT DE 1 A b FAIRE
+        somme <- somme + i;
+    FPOUR
+
+    i <- 1;
+    TQ i <= b FAIRE
+        somme <- somme + i;
+        i <- i + 1;
+    FTQ
+
+
+    SI somme > 10 ALORS
+        ECRIRE(-20); //Somme est supperieur à 10
+    SINON
+        ECRIRE(-21); //Somme est inférieure ou égale à 10
+    FSI
+
+    RENVOIE somme;
+FIN
+
+
+MAIN()
+VAR x,y,resultat;
+DEBUT
+    x <- 3;
+    y <- LIRE();
+    resultat <- testcompilateur(x, y);
+
+    ECRIRE(resultat);
+    //ecrit (((y-1)*y)/2) + ((y*(y+1))/2)  
+FIN
+
+

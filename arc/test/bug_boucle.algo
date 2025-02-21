@@ -1,0 +1,12 @@
+/*
+Cette boucle n'est pas reconnu par bison
+ qu'importe le nombre de fois ou je change sa grammaire
+*/
+MAIN()
+VAR i<-0;
+DEBUT
+    FAIRE 
+        ECRIRE(i);
+        i<-i+1; 
+    TQ i <= 10;
+FIN

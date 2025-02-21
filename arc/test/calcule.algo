@@ -1,0 +1,50 @@
+/*
+Petit programme qui fait des calcule arithmetique de tout type , du simple vers du plus complexe
+Il n'y a qu'un petit nombre d'exemple car sinon le fichier était trop gros pour la machine RAM
+*/
+
+
+MAIN()
+VAR a <- 5;
+VAR b <- 10;
+VAR c <- 2;
+VAR d <- 2;
+VAR e <- 3;
+VAR f <- 7;
+VAR g <- 5;
+VAR h <- 8;
+VAR i <- 4;
+VAR j <- 9;
+VAR k <- 6;
+DEBUT
+    // Addition
+    ECRIRE(a + b);         // Affiche 15
+    // Soustraction
+    ECRIRE(a - c);         // Affiche 3
+    // Multiplication
+    ECRIRE(b * c);         // Affiche 20
+    // Division
+    ECRIRE(b / c);         // Affiche 5
+    // Modulo
+    ECRIRE(b % d);         // Affiche 0
+
+
+
+    // Priorité: multiplication avant addition et soustraction
+    ECRIRE(a + b * c - e);            // Affiche le résultat de l'expression (5 + 10 * 2 - 3) = 22
+
+    // Parenthèses 
+    ECRIRE((a + e) * (c - f));        // Affiche le résultat de l'expression ((5 + 3) * (2 - 7)) = -40
+
+    // Opérateur unaire "-" appliqué à b
+    ECRIRE( -b + a);                   // Affiche le résultat de (-10 + 5) = -5
+
+    
+    // Modulo après addition et soustraction
+    ECRIRE((a + b) % (f - c));        // Affiche le résultat de ((5 + 10) % (7 - 2)) = 0
+
+    a <- (a + b * c - (d / e + (f * g - h))) * (i + j) - k;
+    ECRIRE(a);    //((25 - (2/3 + 27)) * 13 - 6)=-40.666666666666686 mais comme 2/3 devient 0 sur la machine de zanotti, on obtient -32  
+
+
+FIN

@@ -1,0 +1,31 @@
+/*
+Les warning son les suivant :
+    Les division / modulo car les divisions par 0 ne sont pas verifier
+    En cas de LIRE() on previent qu'il faut avoir des valeur dans la bande d'entré
+    Les variable / fonction non utilisée (meme si elles sont initialisées)
+*/
+
+VAR non_utilise_global,a<-1;
+
+ALGO inutile(x,y)
+DEBUT
+1+1;
+FIN
+
+ALGO test()
+VAR non_utilise_test;
+DEBUT
+a+1;
+a<-a/a;
+FIN
+
+MAIN()
+VAR non_utilise_main;
+VAR a,b;
+VAR non_utilise_main2<-10;
+DEBUT
+    a<-LIRE();
+    test();
+    b<-1;
+    ECRIRE(a+b);
+FIN

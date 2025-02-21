@@ -1,0 +1,36 @@
+/*
+La fonction pour calculer la suite de fibonacci /!\le nombre d'instruction requise augmente très vite
+*/
+
+ALGO fibonacci(n)
+DEBUT
+SI n <= 1 ALORS
+    RENVOIE n;
+SINON
+    RENVOIE (fibonacci(n-1) + fibonacci(n-2));
+FSI
+FIN
+
+
+/*
+/!\ met 4188 instruction pour faire fibo(8)
+
+    n	Fibonacci(n)
+    0	   0
+    1	   1
+    2	   1
+    3	   2
+    4	   3
+    5	   5
+    6	   8
+    7	   13
+    8	   21
+    9	   34
+    10	   55
+*/
+MAIN()
+VAR n;
+DEBUT
+    n<-LIRE();
+    ECRIRE (fibonacci(n));
+FIN

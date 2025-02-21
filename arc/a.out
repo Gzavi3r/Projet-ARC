@@ -1,0 +1,354 @@
+LOAD #10    ;On charge la tete de pile
+STORE 5   ;On la stocke dans le registre de la pile
+LOAD #0    ;On charge la tete de pile
+STORE 3   ;On la stocke dans le registre de la pile
+LOAD 5    ;MAIN: on charge la tete de pile 
+STORE 6    ;MAIN: on stocke dans la pile local 
+LOAD #9     ;On charge le nombre de declaration
+ADD 5    ;On bouge la pile d'autant de declaration
+STORE 5    ;On enregistre
+LOAD #5    ;On charge une valeur
+STORE 2    ;On enregistre dans le registre tmp valeur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #0 ;On ajoute la position de l'id dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD 2    ;On charge la valeur que l'on avait stockée 
+STORE @1    ;On donne a  la valeur de l'accumulateur
+LOAD #10    ;On charge une valeur
+STORE 2    ;On enregistre dans le registre tmp valeur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #1 ;On ajoute la position de l'id dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD 2    ;On charge la valeur que l'on avait stockée 
+STORE @1    ;On donne a  la valeur de l'accumulateur
+LOAD #2    ;On charge une valeur
+STORE 2    ;On enregistre dans le registre tmp valeur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #2 ;On ajoute la position de l'id dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD 2    ;On charge la valeur que l'on avait stockée 
+STORE @1    ;On donne a  la valeur de l'accumulateur
+LOAD #7    ;On charge une valeur
+STORE 2    ;On enregistre dans le registre tmp valeur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #3 ;On ajoute la position de l'id dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD 2    ;On charge la valeur que l'on avait stockée 
+STORE @1    ;On donne a  la valeur de l'accumulateur
+LOAD #3    ;On charge une valeur
+STORE 2    ;On enregistre dans le registre tmp valeur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #4 ;On ajoute la position de l'id dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD 2    ;On charge la valeur que l'on avait stockée 
+STORE @1    ;On donne a  la valeur de l'accumulateur
+LOAD #8    ;On charge une valeur
+STORE 2    ;On enregistre dans le registre tmp valeur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #5 ;On ajoute la position de l'id dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD 2    ;On charge la valeur que l'on avait stockée 
+STORE @1    ;On donne a  la valeur de l'accumulateur
+LOAD #4    ;On charge une valeur
+STORE 2    ;On enregistre dans le registre tmp valeur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #6 ;On ajoute la position de l'id dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD 2    ;On charge la valeur que l'on avait stockée 
+STORE @1    ;On donne a  la valeur de l'accumulateur
+LOAD #1    ;On charge une valeur
+STORE 2    ;On enregistre dans le registre tmp valeur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #7 ;On ajoute la position de l'id dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD 2    ;On charge la valeur que l'on avait stockée 
+STORE @1    ;On donne a  la valeur de l'accumulateur
+LOAD #0    ;On charge une valeur
+STORE 2    ;On enregistre dans le registre tmp valeur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #8 ;On ajoute la position de l'id dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD 2    ;On charge la valeur que l'on avait stockée 
+STORE @1    ;On donne a  la valeur de l'accumulateur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #1 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL b
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #0 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL a
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUML 87  ;INF: Si x-y<0 alors saute a VRAI
+LOAD #0  ;INF: sinon alors FAUX
+JUMP 88 ;INF: on saute le VRAI 
+LOAD #1  ;INF: on charge VRAI
+WRITE    ;
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #1 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL b
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #0 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL a
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUMG 104  ;SUP: Si x-y>0 alors saute a VRAI
+LOAD #0  ;SUP: sinon alors FAUX
+JUMP 105 ;SUP: on saute le VRAI 
+LOAD #1  ;SUP: on charge VRAI
+WRITE    ;
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #2 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL c
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #0 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL a
+DEC 5  ;EG:On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUMZ 121  ;EG: Si x-y=0 alors saute a VRAI
+LOAD #0  ;EG: sinon alors FAUX
+JUMP 122 ;EG: on saute le VRAI 
+LOAD #1  ;EG: on charge VRAI
+WRITE    ;
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #2 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL c
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #0 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL a
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUMZ 138  ;DIFF: Si x-y=0 alors saute a FAUX
+LOAD #1  ;DIFF: sinon alors VRAI
+JUMP 139 ;DIFF: on saute le FAUX 
+LOAD #0  ;DIFF: on charge FAUX
+WRITE    ;
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #3 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL d
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #1 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL b
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUMG 156  ;SUPEG: Si x-y>0 alors saute a VRAI
+JUMZ 156  ;SUPEG: Si x-y=0 alors saute a VRAI
+LOAD #0  ;SUPEG: sinon alors FAUX
+JUMP 157 ;SUPEG: on saute le VRAI 
+LOAD #1  ;SUPEG: on charge VRAI
+WRITE    ;
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #2 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL c
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #4 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL e
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUML 174  ;INFEG: Si x-y>0 alors saute a VRAI
+JUMZ 174  ;INFEG: Si x-y=0 alors saute a VRAI
+LOAD #0  ;INFEG: sinon alors FAUX
+JUMP 175 ;INFEG: on saute le VRAI 
+LOAD #1  ;INFEG: on charge VRAI
+WRITE    ;
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #1 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL b
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #0 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL a
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUML 191  ;INF: Si x-y<0 alors saute a VRAI
+LOAD #0  ;INF: sinon alors FAUX
+JUMP 192 ;INF: on saute le VRAI 
+LOAD #1  ;INF: on charge VRAI
+JUMZ 212 ;ET: si l'op gauche vaut 0 on saute 
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #2 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL c
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #1 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL b
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUMG 208  ;SUP: Si x-y>0 alors saute a VRAI
+LOAD #0  ;SUP: sinon alors FAUX
+JUMP 209 ;SUP: on saute le VRAI 
+LOAD #1  ;SUP: on charge VRAI
+JUMZ 212 ;ET: si l'op droit vaut 0 on saute 
+LOAD #1 ;ET: si les deux sont bon on charge 1 
+JUMP 213 ;ET: on saute le sinon 
+LOAD #0 ;ET: sinon on charge 0 
+WRITE    ;
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #1 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL b
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #0 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL a
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUMG 229  ;SUP: Si x-y>0 alors saute a VRAI
+LOAD #0  ;SUP: sinon alors FAUX
+JUMP 230 ;SUP: on saute le VRAI 
+LOAD #1  ;SUP: on charge VRAI
+JUMZ 232 ;OU: si l'op gauche vaut 0 on check l'op droit 
+JUMP 249 ;OU: si l'op gauche vaut 1 on a fini 
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #3 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL d
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #2 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL c
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUML 247  ;INF: Si x-y<0 alors saute a VRAI
+LOAD #0  ;INF: sinon alors FAUX
+JUMP 248 ;INF: on saute le VRAI 
+LOAD #1  ;INF: on charge VRAI
+JUMZ 251 ;OU: si l'op droit vaut aussi 0 alors FAUX 
+LOAD #1 ;OU : EXP VRAI on charge 1
+JUMP 252 ;OU: on saute a l'instr suivante 
+LOAD #0 ;OU : EXP FAUX on charge 0
+WRITE    ;
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #2 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL c
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #0 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL a
+DEC 5  ;EG:On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUMZ 268  ;EG: Si x-y=0 alors saute a VRAI
+LOAD #0  ;EG: sinon alors FAUX
+JUMP 269 ;EG: on saute le VRAI 
+LOAD #1  ;EG: on charge VRAI
+JUMZ 272 ;NON: si l'op vaut 0 on saute charger 1 
+LOAD #0 ;NON :on charge 0
+JUMP 273 ;NON: on saute a l'instr suivante 
+LOAD #1 ;NON : l'op est vrai donc on charge 0
+WRITE    ;
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #1 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL b
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #0 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL a
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUML 289  ;INF: Si x-y<0 alors saute a VRAI
+LOAD #0  ;INF: sinon alors FAUX
+JUMP 290 ;INF: on saute le VRAI 
+LOAD #1  ;INF: on charge VRAI
+JUMZ 318 ;ET: si l'op gauche vaut 0 on saute 
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #5 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL f
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #4 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL e
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #3 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL d
+DEC 5  ;On ajuste le sommet de la pile
+ADD @5    ;On donne le sommet de la pile
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUMG 314  ;SUP: Si x-y>0 alors saute a VRAI
+LOAD #0  ;SUP: sinon alors FAUX
+JUMP 315 ;SUP: on saute le VRAI 
+LOAD #1  ;SUP: on charge VRAI
+JUMZ 318 ;ET: si l'op droit vaut 0 on saute 
+LOAD #1 ;ET: si les deux sont bon on charge 1 
+JUMP 319 ;ET: on saute le sinon 
+LOAD #0 ;ET: sinon on charge 0 
+JUMZ 321 ;OU: si l'op gauche vaut 0 on check l'op droit 
+JUMP 339 ;OU: si l'op gauche vaut 1 on a fini 
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #7 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL h
+STORE @5     ;on stocke au sommet de la pile
+INC 5    ;on incremente le sommet de la pile
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #6 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL g
+DEC 5  ;On ajuste le sommet de la pile
+SUB @5    ;On donne le sommet de la pile
+JUML 337  ;INFEG: Si x-y>0 alors saute a VRAI
+JUMZ 337  ;INFEG: Si x-y=0 alors saute a VRAI
+LOAD #0  ;INFEG: sinon alors FAUX
+JUMP 338 ;INFEG: on saute le VRAI 
+LOAD #1  ;INFEG: on charge VRAI
+JUMZ 341 ;OU: si l'op droit vaut aussi 0 alors FAUX 
+LOAD #1 ;OU : EXP VRAI on charge 1
+JUMP 342 ;OU: on saute a l'instr suivante 
+LOAD #0 ;OU : EXP FAUX on charge 0
+STORE 2    ;On enregistre dans le registre tmp valeur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #8 ;On ajoute la position de l'id dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD 2    ;On charge la valeur que l'on avait stockée 
+STORE @1    ;On donne a res la valeur de l'accumulateur
+LOAD 6 ;On charge la tete de pile avant appelle de fonction 
+ADD #8 ;On ajoute sa position dans la memoire local
+STORE 1 ;On stocke dans le registre tmp
+LOAD @1 ;On charge la variable LOCAL res
+WRITE    ;
+STOP

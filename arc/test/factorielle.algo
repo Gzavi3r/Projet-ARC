@@ -1,0 +1,26 @@
+/*
+La fonction classique pour calculer la factorielle d'un nombre de maniere recursive
+*/
+
+ALGO factorielle(n)
+DEBUT
+    SI n > 1 ALORS
+        RENVOIE (n * factorielle(n - 1));
+    SINON
+        RENVOIE 1;
+    FSI
+FIN
+
+
+/*  
+pour n = 7, la sortie doit être :1, 2, 6, 24, 120, 720, 5040
+/!\La machine RAM de M.Zanotti est modulo 32 768 donc factorielle(8) renvoie 7552
+*/
+MAIN()
+VAR n, i;
+DEBUT
+    n <- LIRE();
+    POUR i ALLANT DE 1 A n + 1 FAIRE
+        ECRIRE(factorielle(i));
+    FPOUR
+FIN

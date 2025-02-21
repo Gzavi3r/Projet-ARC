@@ -1,0 +1,19 @@
+/*
+Le compilateur va chercher une variable dans le contexte de la fonction ou en global si 
+il n'a pas trouvé
+*/
+
+VAR compteur<-0;
+
+ALGO compte_global()
+DEBUT
+compteur<-compteur+1;
+FIN
+
+MAIN()
+VAR i; 
+DEBUT
+ECRIRE(NON VRAI);
+ECRIRE(VRAI);
+ECRIRE(FAUX);
+FIN

@@ -1,0 +1,99 @@
+/*
+Voici un programme qui montre tout les type d'erreur implémentées.
+Toutes les erreurs sont données avec un type d'erreur , les types d'erreur sont majoritairement repris de python 
+Un effort à été fait pour localiser les erreurs le mieux possible (On manque de connaissance sur la gestion des tocken pour faire mieux)
+
+
+Les erreurs gérées sont les suivantes:
+    {SYNTAX_ERROR,LEXICAL_ERROR,NAME_ERROR,ZeroDivision_Error,REDEFINITION_ERROR,TYPE_ERROR,ARITY_ERROR,MEMORY_ERROR} 
+
+    Les erreurs lexical / syntaxique sont gérées par Flex / Bison (nous n'avons pas reussi a recuperer l'erreur de base que renvoie bison pour la mettre en français)
+    Les erreur de nom : C'est quand on essaie d'appeller une variable/fonction qui n'éxiste pas
+    Les erreurs de redéfinition : C'est quand on essaie de redéfinire une variable / fonction
+    Les erreurs de type : c'est si on essaie d'utiliser ou d'affecter avec une variable qui n'est pas initialisée ou une fonction qui ne renvoie rien 
+    Les erreurs d'arité : C'est quand on appelle une fonction avec le mauvais nombre de paramètre
+    Les erreurs de memoire : On peut avoir une erreur de memoire si on a plus de 128 symbole dans la table de symbole 
+
+    Les erreurs de division par 0 on été réflechie mais cela demanderai de calculer à l'avance l'expression a droite du diviseur ce qui inclut:
+        -des possibles appelle de fonction ( 1 / fonction();)
+        -des appelle de variable (1/a)
+        -des expression arithmetique (1/1-1) 
+    Même si les expression arithmetique et appelle de variable sont possiblement traitable (nous n'avons pas tésté) en parcourans l'asa et la table de symbole , Nous ne voyons pas comment facilement calculer en avance un appelle de fonction. 
+    
+    Nous avons donc fait le choix de mettre un warning si il y a une division et de laisser l'utilisateur gérer les divisions par 0.  
+
+*/
+
+//ereur syntaxique
+//VAR 12u;
+
+ALGO NO_RENVOIE()
+DEBUT
+1+1;
+FIN
+
+/*
+Erreur de redéfinition
+ALGO NO_RENVOIE()
+DEBUT
+1+1;
+FIN
+*/
+
+ALGO SI_RENVOIE()
+DEBUT
+SI 1 ALORS
+RENVOIE 1;
+FSI
+FIN
+
+ALGO SI_SINON_RENVOIE()
+DEBUT
+SI 1 ALORS
+RENVOIE 1;
+SINON
+RENVOIE 0;
+FSI
+FIN
+
+ALGO arite(a,b)
+DEBUT
+a+b;
+FIN
+
+MAIN()
+VAR toto,tutu,titi;
+VAR tata<-10;
+//Erreur de redéfinition
+//VAR toto;
+DEBUT
+//erreur lexical, ':' n'existe pas 
+//1+1:
+
+//erreur de type
+//toto<-NO_RENVOIE();
+
+//erreur de type
+//toto<-SI_RENVOIE();
+
+//pas d'erreur car la fonction a un renvoie dans chaque "branche"
+titi<-SI_SINON_RENVOIE();
+
+//erreur de type
+//1+toto;
+
+//pas d'erreur car tata est init
+1+tata;
+
+//erreur de nommage (NameError en python)
+//1+tete;
+
+//erreur d'arité , pas assez de paramètre
+//arite(1);
+
+//erreur d'arité , trop de paramètre
+//arite(1,2,3);
+
+
+
+FIN

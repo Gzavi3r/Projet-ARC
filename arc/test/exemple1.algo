@@ -1,0 +1,15 @@
+ALGO fibonacci(n)
+DEBUT
+SI n <= 1 ALORS
+    RENVOIE n;
+SINON
+    RENVOIE (fibonacci(n-1) + fibonacci(n-2));
+FSI
+FIN
+
+MAIN()
+VAR n,y,a<-10;
+DEBUT
+n<-LIRE();
+ECRIRE (fibonacci(n));
+FIN
