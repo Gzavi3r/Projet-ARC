@@ -1,0 +1,1 @@
+Un projet de Compilation et théorie des langages qui utilise Flex et Bison pour faire un compilateur pour le langage algorithmique utilisé en cours vers la machine RAM (https://zanotti.univ-tln.fr/RAM/ram.php)
